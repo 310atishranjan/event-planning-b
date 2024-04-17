@@ -28,6 +28,12 @@ app.use(express.urlencoded());
 const db=require("./config/db");
 db();
 
+app.get('/',(req,res)=>{
+    res.json({
+        message:"geeting on server",
+        success:true
+    })
+})
 const messageRouter=require('./Routes/userRoutes');
 app.use('/api/v1/user',messageRouter);
 
