@@ -3,7 +3,7 @@ const app=express();
 const cors=require("cors");
 
 const dotenv=require("dotenv");
-dotenv.config(path="/env");
+dotenv.config();
 app.use(cors({
     origin:[process.env.FRONTEND_URL],
     methods:["POST"],
